@@ -1,4 +1,17 @@
 .features {
-  background-color: $color-grey-light-2;
+  // TODO: Grid positioning
   grid-column: center-start / center-end;
+
+  // Props
+  // Features block is a subgrid of the main container (.container)
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3 cols 1fr each
+  grid-gap: 6rem;
+  // We do not define grid-template-rows, creating an implicit grid.
+  // All of the items will be placed inside.
+  margin: 15rem 0;
+  background-color: $color-grey-light-2;
+}
+
+.features > .feature {
 }
