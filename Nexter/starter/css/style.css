@@ -30,6 +30,10 @@ body {
 .features {
   background-color: #aaa; }
 
+.container {
+  display: grid;
+  grid-template-rows: 80vh; }
+
 .story__pictures {
   background-color: #c69963; }
 

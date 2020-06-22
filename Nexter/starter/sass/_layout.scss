@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+
+  // 1st row height: Adapts itself to viewport height (80vh)
+  // 2nd row height: Relies on the content.
+  // 3rd row height: Adapts itself to viewport width (40vw)
+  // 4th, 5th and 6th row height: Relies on the content.
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+}
