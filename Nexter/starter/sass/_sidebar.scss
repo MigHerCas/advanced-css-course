@@ -1,3 +1,7 @@
 .sidebar {
   background-color: $color-primary;
+  grid-column: sidebar-start / sidebar-end;
+  // Expands all the way from the beginning of the grid to the end.
+  grid-row: 1 / -1;
+  
 }
