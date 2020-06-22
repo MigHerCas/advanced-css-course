@@ -1,7 +1,9 @@
 .story__pictures {
+  grid-column: full-start / col-end 4;
   background-color: $color-primary;
 }
 
 .story__content {
+  grid-column: col-start 5 / full-end;
   background-color: $color-grey-light-1;
 }
