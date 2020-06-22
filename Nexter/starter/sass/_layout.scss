@@ -1,9 +1,19 @@
 .container {
   display: grid;
 
-  // 1st row height: Adapts itself to viewport height (80vh)
-  // 2nd row height: Relies on the content.
-  // 3rd row height: Adapts itself to viewport width (40vw)
-  // 4th, 5th and 6th row height: Relies on the content.
+  /*
+  1st row height: Adapts itself to viewport height (80vh)
+  2nd row height: Relies on the content.
+  3rd row height: Adapts itself to viewport width (40vw)
+  4th, 5th and 6th row height: Relies on the content. */
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+
+  /*
+  1140px /8 columns -> 14.5 rem -> ~14rem
+  Columns responsive width: between min-content and 14rem.
+  8rem stands for the sidebar column width
+  1fr stands for two side columns that take the available space:
+    The reason behind using this instead of justify-content: center; is that we have full-bleed
+    sections (header, footer,...)  */
+  grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
 }
