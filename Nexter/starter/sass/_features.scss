@@ -1,4 +1,31 @@
 .features {
-  background-color: $color-grey-light-2;
+  // Positioning
   grid-column: center-start / center-end;
+  display: grid;
+  // Extra rows placed inside an implicit grid
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start; // By default: strech -> now the text is vertically top positioned
+  gap: 6rem;
+  margin: 15rem 0;
+}
+
+// Reusable block, independent from the features container.
+.feature {
+  // 2 by 2 grid
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  row-gap: 1.5rem; // 15px
+  column-gap: 2.5rem; // 25px
+
+  .feature__icon {
+    grid-row: 1 / span 2;
+    fill: $color-primary;
+    width: 4.5rem; // 45px
+    height: 4.5rem; // 45px
+    transform: translateY(-1rem); // -10px
+  }
+
+  .feature__text {
+    font-size: 1.7rem; // 17px
+  }
 }
