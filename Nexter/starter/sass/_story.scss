@@ -4,6 +4,16 @@
 }
 
 .story__content {
+  display: flex;
+  flex-direction: column;
   grid-column: col-start 5 / full-end;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 6rem 10vw; // 60px + horizontal padding variates on vw
   background-color: $color-grey-light-1;
+}
+
+.story__text {
+  font-size: 1.5rem; // 15px
+  font-style: italic;
 }
